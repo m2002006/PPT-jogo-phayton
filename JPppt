@@ -1,0 +1,43 @@
+from random import randint
+from time import sleep
+
+itens = ('pedra','papel','tesoura')
+computador = randint (0,2)
+print ('''suas escolhas:
+[0] Pedra 
+[1] Papel
+[2] Tesoura''')
+
+jogador = int(input('Faça sua jogada! '))
+print ('JO')
+sleep (1)
+print ('KEN')
+sleep (1)
+print ('PO!')
+print ('--' * 12)
+print ('O computador escolheu {}.'.format(itens[computador]))
+print ('Você jogou {}.'.format(itens[jogador]))
+print ('--' * 12)
+if computador == 0: #pedra 
+   if jogador == 0:
+      print ('Deu empate.')
+   elif jogador == 1:
+      print ('Você venceu!')
+   elif jogador == 2:
+      print ('O computador venceu!')
+      
+elif computador == 1: #papel
+    if jogador == 0:
+       print ('O computador venceu!')
+    elif jogador == 1:
+       print ('Deu empate.')
+    elif jogador == 2:
+       print ('Você venceu!')
+    
+elif computador == 2: #tesoura
+      if jogador == 0:
+         print ('Você venceu!')
+      elif jogador == 1:
+         print ('O computador venceu!')
+      elif jogador == 2:
+         print ('Deu empate.')   
